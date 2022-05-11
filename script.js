@@ -1,14 +1,10 @@
-// Assignment Code
-var generateBtn = document.querySelector("#generate");
+const username = document.getElementById("username");
+const saveScoreBtn = document.getElementById("saveScoreBtn");
+const finalScore = document.getElementById("finalScore");
+const mostRecentScore = document.getElementById("mostRecentScore")
 
-// Write password to the #password input
-function writePassword() {
-  var password = generatePassword();
-  var passwordText = document.querySelector("#password");
+const highScores = JSON.parse(localStorage.getItem("highScores"));
+console.log(highScores);
+console.log(JSON.parse(localStorage,getItem("highScore")));
+finalScore.innerText = mostRecentScore;
 
-  passwordText.value = password;
-
-}
-
-// Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
