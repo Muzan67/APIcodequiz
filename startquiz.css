@@ -7,8 +7,19 @@
     background-color: #9370db;
 }
 
-.answer-prefix {
+.answer-option {
   padding: 10px 20px;
   background-color: #9370db;
   color: white;
+}
+
+.answer-text {
+    padding: 15px;
+}
+
+.answer-container.hover {
+    cursor: pointer;
+    box-shadow: 20px 20px 50px 10px pink inset;;
+    transform: translateY(4px);
+    transition: 500ms linear;
 }

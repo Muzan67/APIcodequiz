@@ -1,10 +1,9 @@
 /* text */
 *
-a {
-    font-size: 20px;
+.a {
+    font-size: 30px;
     color: black;
-    margin-bottom: 5px;
-    text-align: center;
+    margin: 30px 0;
 }
 
 h1 {
@@ -83,6 +82,7 @@ display: flex;
 }
 
 /* click button */
+
 .button {
     font-size: 20px;
     padding: 10px;
@@ -97,9 +97,9 @@ display: flex;
 
 .arrowkey {
     cursor: pointer;
-    box-shadow: none;
+    box-shadow: 20px 20px 50px 10px pink inset;;
     transform: translate(4px);
-    transition: 1s;
+    transition: 500ms linear;
 }
 
 .hoverarrowkey {
