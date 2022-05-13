@@ -57,7 +57,7 @@ display: flex;
     max-width: auto;
 }
 
-.container > * {
+.container > {
     width: 100%;
 }
 
