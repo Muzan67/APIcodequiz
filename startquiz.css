@@ -1,6 +1,6 @@
 .answer-container {
     display: flex;
-    margin-top: 1px;
+    margin-bottom: 5px;
     width: 100%;
     font-size: 20px;
     border: ridge;
@@ -15,11 +15,13 @@
 
 .answer-text {
     padding: 15px;
+    width: 100%;
 }
 
 .answer-container.hover {
     cursor: pointer;
-    box-shadow: 20px 20px 50px 10px pink inset;;
-    transform: translateY(4px);
-    transition: 500ms linear;
+    cursor: pointer;
+    box-shadow: 0 0.4rem 1.4rem pink inset;
+    transform: translateY(-0.1rem);
+    transition: 150ms;
 }
