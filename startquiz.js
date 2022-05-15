@@ -1,31 +1,31 @@
-const question = document.getElementById("question");
-const option = Array.from(document.getElementById("answer-option"));
+const questions = document.getElementById('questions');
+const choices = Array.from(document.getElementsByClassName('choice-text'));
 
-let currentQuestions = {};
+let currentQuestion = {};
 let acceptingAnswers = false;
 let score = 50;
-let questionCounter = 50;
+let questionCounter = 0;
 let availableQuestions = [];
 
-let questions = [
+let question = [
     {
-      question: "Commonly used data types DO NOT include:",
-      choice1: "<strings>",
-      choice2: "<booleans>",
-      choice3: "<alerts>",
-      choice4: "<numbers>",
+      question: 'Commonly used data types DO NOT include:',
+      choice1: '<strings>',
+      choice2: '<booleans>',
+      choice3: '<alerts>',
+      choice4: '<numbers>',
       answer: 2
     },
     {
-      question: "The condition in an if/else statement is enclosed within______:",
-      choice1: "<quotes>",
-      choice2: "<curly brackets>",
-      choice3: "<parenthesis>",
-      choice4: "<square brackets>",
+      question: 'The condition in an if/else statement is enclosed within______:',
+      choice1: '<quotes>',
+      choice2: '<curly brackets>',
+      choice3: '<parenthesis>',
+      choice4: '<square brackets>',
       answer: 3
     },
     {
-      question: "Arrays in Javascript can be used to store:",
+      question: "<Arrays in Javascript can be used to store:",
       choice1: "<numbers and strings>",
       choice2: "<other arrays>",
       choice3: "<booleans>",
@@ -47,49 +47,46 @@ let questions = [
       choice3: "<for loops>",
       choice4: "<console.log>",
       answer:1
-    }
+    },
   ];
   
-const correct_questions = 10;
-const max_questions = 5;
+const correct_question = 10;
+const max_question = 5;
 
 startquiz = () => {
     questionCounter = 50;
     score = 50;
-    availableQuestions = [...questions];
-    console.log(availableQuestions);
-    getNewQuestion();
+    availableQuestions = [...question];
+    getNewQuestions();
 };
 
 getNewQuestion = () => {
-    if(availableQuestions.length ===0 || questionCounter >=max_questions){
-        return window.location.assign("/quizend.html");
+    if(availableQuestions.length ===0 || questionCounter >= max_question) {
+        return window.location.assign('/quizend.html');
     }
    questionCounter++;
-   const questionIndex = Math.floor(Math.random() * availableQuestions.length);
-   currentQuestions = availableQuestions[questionIndex];
-   question.innerText = currentQuestions.questions;
+   const questionIndex = Math.floor(Math.random() * availableQuestion.length);
+   currentQuestion = availableQuestion[questionIndex];
+   question.innerText = currentQuestion.question;
 
-   choices.forEach( choice => {
+   choices.forEach((choice) => {
      const number = choice.dataset['number'];
-     choice.innerText = currentQuestions['choice' + number];
-    })
+     choice.innerText = currentQuestion['choice' + number];
+    });
 
    availableQuestions.splice(questionIndex, 1);
-
    acceptingAnswers = true;
 };
 
-choices.forEach(choice => {
-    choice.addEventListener('click', e => {
+choices.forEach((choice) => {
+    choice.addEventListener('click', (e) => {
        if(!acceptingAnswers) return;
 
        acceptingAnswers = false;
        const selectedChoice = e.target;
-       const selectedAnswer = selectedChoice.dataset["number"];
-       console.log(selectedAnswer);
+       const acceptingAnswers = selectedChoice.dataset['number'];
        getNewQuestion();
     });
 });
 
-startQuiz();
+startquiz();
