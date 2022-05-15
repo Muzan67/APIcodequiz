@@ -57,7 +57,7 @@ startquiz = () => {
     questionCounter = 50;
     score = 50;
     availableQuestions = [...question];
-    getNewQuestions();
+    getNewQuestions = [...question];
 };
 
 getNewQuestion = () => {
@@ -77,16 +77,5 @@ getNewQuestion = () => {
    availableQuestions.splice(questionIndex, 1);
    acceptingAnswers = true;
 };
-
-choices.forEach((choice) => {
-    choice.addEventListener('click', (e) => {
-       if(!acceptingAnswers) return;
-
-       acceptingAnswers = false;
-       const selectedChoice = e.target;
-       const acceptingAnswers = selectedChoice.dataset['number'];
-       getNewQuestion();
-    });
-});
 
 startquiz();

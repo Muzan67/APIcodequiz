@@ -54,3 +54,13 @@ console.log(highScores);
 console.log(JSON.parse(localStorage.getItem("highScore")));
 finalScore.innerText = document.getElementById("mostRecentScore")
 
+choices.forEach((choice) => {
+  choice.addEventListener('click', (e) => {
+     
+     var acceptingAnswers = false;
+     const selectedChoice = e.target;
+     const acceptingAnswers = (selectedChoice.dataset['number']);
+     getNewQuestion();
+     if(acceptingAnswers) return;
+  });
+});
