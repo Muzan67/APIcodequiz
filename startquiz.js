@@ -62,7 +62,8 @@ startQuiz = () => {
 
 getNewQuestion = () => {
     if(availableQuestions.length ===0 || questionCounter >= max_question) {
-        return window.location.assign('/quizend.html');
+        localStorage.setItem('mostRecentScore', score);
+        return window.location.assign("/quizend.html");
     }
    questionCounter++;
    const questionIndex = Math.floor(Math.random() * availableQuestion.length);
