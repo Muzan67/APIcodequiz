@@ -6,15 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>APICodeQuiz</title>
     <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
 </head>
 <header>
   <!--Header-->
   <div class="header">
-  <div>
-  <a class="button" href="/ViewHighScore.html">View High Score</a> 
+  <span class="button" href="ViewHighScore">View High Score</a> 
   </div>
   <div>
-  <a class="button" href="/Timer.html">Timer</a>
+  <p id="countdown"> 50</p>
+  </section>
   </div>
   <div>
 </header>
@@ -29,18 +30,20 @@
       </div>
  
       <div class="quiz-body">
-        <h2 class = "quiz-question" id = "question">
+        <div id="question-container" class="hide">
           <ul>Try to answer the following code-related questions within the time</ul>
           <ul>limit. Keep in mind that incorrect answers will penalize your score time</ul>
           <ul>by ten seconds!</ul>
           <button type = "button" id = "quiz-body button">Start Quiz</button>
-        <ul class = "quiz-options">
-          <li>1. Hyper text transfer package</li>
-          <li>1. Hyper text transfer package</li>
-          <li>1. Hyper text transfer package</li>
-          <li>1. Hyper text transfer package</li>
-        </ul>
-        <div id = "result">
+        <div id="startGame"></div>
+        <div id="answer-buttons" class="btn-grid">
+          <button class="btn">Answer 1</button>
+          <button class="btn">Answer 2</button>
+          <button class="btn">Answer 3</button>
+          <button class="btn">Answer 4</button>
+        </div>
+      </div>
+      <div id = "result">
           <!--result section-->
         </div>
       </div>
@@ -48,8 +51,7 @@
       </div>
     </div>
   </div>
-  <script src="script.js"></script>
-</body>
+  </body>
   <!--Footer-->
 <footer>
 </footer>
