@@ -53,7 +53,7 @@ let question = [
 const correct_question = 10;
 const max_question = 5;
 
-startquiz = () => {
+startQuiz = () => {
     questionCounter = 50;
     score = 50;
     availableQuestions = [...question];
@@ -78,4 +78,4 @@ getNewQuestion = () => {
    acceptingAnswers = true;
 };
 
-startquiz();
+startQuiz();
