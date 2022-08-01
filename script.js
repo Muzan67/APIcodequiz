@@ -1,4 +1,12 @@
-// countdown timer //
+var body = documnet.body;
+var currentQuestionIndex = -1;
+var quizData = [
+
+
+  
+]
+
+
 const startingSeconds = 50;
 let time = startingSeconds * 50;
 
@@ -98,48 +106,28 @@ function clearStatusClass(element) {
 const questions = [
   {
     question: 'Commonly used data types DO NOT include?',
-    answer: [
-    { choice1: 'strings', correct: false },
-    { choice2: 'booleans', correct: true },
-    { choice3: 'alerts', correct: false },
-    { choice4: 'numbers', correct: false },
-    ]
+    answer: ['strings', 'booleans', 'alerts','numbers'],
+    correctAnswer: 2
   },
   {
     question: 'The condition in an if/else statement is enclosed within______?',
-    answer: [
-    { choice1: 'quotes', correct: false },
-    { choice2: 'curly brackets', correct: false },
-    { choice3: 'parenthesis', correct: true },
-    { choice4: 'square brackets', correct: false },
-    ]
+    answer: ['quotes','curly brackets', 'parenthesis','square brackets'],
+    correctAnswer: 2
   },
   {
     question: "<Arrays in Javascript can be used to store?",
-    answer: [
-    { choice1: 'numbers and strings', correct: false },
-    { choice2: 'other arrays', correct: false },
-    { choice3: 'booleans', correct: false },
-    { choice4: 'all of the above', correct: true },
-    ]
+    answer: ['numbers and strings', 'other arrays', 'booleans', 'all of the above'],
+    correctAnswer: 3
   },
   {
     question: "String values must be enclosed within_____ when being assigned to variables?",
-    answer: [
-    { choice1: 'commas', correct: false },
-    { choice2: 'curly brackets', correct: false },
-    { choice3: 'quotes', correct: true },
-    { choice4: 'parenthesis', correct: false },
-    ]
+    answer: ['commas', 'curly brackets', 'quotes', 'parenthesis'],
+    correctAnswer: 2
   },
   {
     question: "A very useful tool used during development and debugging for printing content to the debugger is?",
-    answer: [
-    { choice1: 'Javascript', correct: true },
-    { choice2: 'terminal / bash', correct: false },
-    { choice3: 'for loops', correct: false },
-    { choice4: 'console.log', correct: false },
-    ]
-  }
+    answer: ['Javascript', 'terminal / bash', 'for loops', 'console.log'],
+    correctAnswer: 3
+  },
 ]
  
