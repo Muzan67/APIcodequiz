@@ -5,54 +5,47 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>APICodeQuiz</title>
-    <link rel="stylesheet" href="style.css">
-    <script defer src="script.js"></script>
+    <link href='https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,300;1,400;1,500;1,600;1,700&display=swap' rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    
 </head>
-<header>
-  <!--Header-->
-  <div class="header">
-    <span class="button" href="ViewHighScore">View High Score</a> 
-  </div>
+
+<body>
+ <!--Header-->
+  <div class="row">
+    <div class="scores"><a href="highscores.html">View High Scores</a></div> 
+    
+    <div class="timer">Time: <span id="time">0</span></div>
   <div>
-    <p id="countdown"> 50</p>
-  </section>
-  </div>
-  <div>
-</header>
-  <!--Body-->
-<body class = "flex">
-  <div class="body">
-    <div class = "quiz-container">
-      <div class = "quiz-head">
-        <h1 class = "quiz-title">Coding Quiz Challenge</h1>
-        <div class = "quiz-score flex">
-        </div>
-      </div>
- 
-      <div class="quiz-body">
-        <div id="question-container" class="hide">
-          <ul>Try to answer the following code-related questions within the time</ul>
-          <ul>limit. Keep in mind that incorrect answers will penalize your score time</ul>
-          <ul>by ten seconds!</ul>
-          <button type = "button" id = "quiz-body button">Start Quiz</button>
-        <div id="startGame"></div>
-        <div id="answer-buttons" class="btn-grid">
-          <button class="btn">Answer 1</button>
-          <button class="btn">Answer 2</button>
-          <button class="btn">Answer 3</button>
-          <button class="btn">Answer 4</button>
-        </div>
-      </div>
-      <div id = "result">
-          <!--result section-->
-        </div>
-      </div>
-      <div class = "quiz-foot">
-      </div>
+
+  <!-- Body-->
+  <div class="wrapper">
+    <div id ="start-quiz" class="start">
+      <h1>Coding Quiz Challenge</h1>
+        <p>Try to answer the following code-related questions within the time
+           limit. Keep in mind that incorrect answers will penalize your score time
+           by ten seconds!
+        </p>
+      <button class ="btn" id ="startBtn">Start Quiz</button>
     </div>
+
+    <div class="question" id="questionContainer"></div>
   </div>
-  </body>
-  <!--Footer-->
-<footer>
-</footer>
+
+  <div class="done">
+    <div>
+      <h1>All done!</h1>
+      <p class="finalScore"></p>
+      <form>
+        <input type="text" id="initials" name="initials" placeholder="Your initials">
+        <label for="initials">Enter initials:</label>
+        <button class="btn" id="submitBtn">Submit</button>
+      </form>
+    </div>
+
+  </div>
+      
+      <script src="./script.js"></script>
+</body>
+  
 </html>
